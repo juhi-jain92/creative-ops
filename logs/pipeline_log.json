@@ -1,0 +1,161 @@
+[
+  {
+    "timestamp": "2026-07-01T22:01:37.101823+00:00",
+    "rules_version": "1.0",
+    "step": "extraction",
+    "status": "ok",
+    "input": {
+      "metadata": {}
+    },
+    "output": {
+      "logo_detected": true,
+      "logo_confidence": 0.65,
+      "restricted_category": false,
+      "restricted_category_confidence": 0.95,
+      "competitor_detected": false,
+      "competitor_confidence": 0.91,
+      "black_border": false,
+      "black_border_confidence": 0.88,
+      "pixelation": false,
+      "pixelation_confidence": 0.85,
+      "image_cropped": false,
+      "image_cropped_confidence": 0.9,
+      "urgency_language": false,
+      "urgency_language_confidence": 0.93,
+      "safe_zone_violation": false,
+      "safe_zone_confidence": 0.87
+    }
+  },
+  {
+    "timestamp": "2026-07-01T22:01:37.102267+00:00",
+    "rules_version": "1.0",
+    "step": "confidence_filter",
+    "status": "ok",
+    "input": {
+      "threshold": 0.8,
+      "raw": {
+        "logo_detected": true,
+        "logo_confidence": 0.65,
+        "restricted_category": false,
+        "restricted_category_confidence": 0.95,
+        "competitor_detected": false,
+        "competitor_confidence": 0.91,
+        "black_border": false,
+        "black_border_confidence": 0.88,
+        "pixelation": false,
+        "pixelation_confidence": 0.85,
+        "image_cropped": false,
+        "image_cropped_confidence": 0.9,
+        "urgency_language": false,
+        "urgency_language_confidence": 0.93,
+        "safe_zone_violation": false,
+        "safe_zone_confidence": 0.87
+      }
+    },
+    "output": {
+      "logo_detected": true,
+      "logo_confidence": 0.65,
+      "restricted_category": false,
+      "restricted_category_confidence": 0.95,
+      "competitor_detected": false,
+      "competitor_confidence": 0.91,
+      "black_border": false,
+      "black_border_confidence": 0.88,
+      "pixelation": false,
+      "pixelation_confidence": 0.85,
+      "image_cropped": false,
+      "image_cropped_confidence": 0.9,
+      "urgency_language": false,
+      "urgency_language_confidence": 0.93,
+      "safe_zone_violation": false,
+      "safe_zone_confidence": 0.87
+    }
+  },
+  {
+    "timestamp": "2026-07-01T22:01:37.102527+00:00",
+    "rules_version": "1.0",
+    "step": "rule_evaluation",
+    "status": "ok",
+    "input": {
+      "logo_detected": true,
+      "logo_confidence": 0.65,
+      "restricted_category": false,
+      "restricted_category_confidence": 0.95,
+      "competitor_detected": false,
+      "competitor_confidence": 0.91,
+      "black_border": false,
+      "black_border_confidence": 0.88,
+      "pixelation": false,
+      "pixelation_confidence": 0.85,
+      "image_cropped": false,
+      "image_cropped_confidence": 0.9,
+      "urgency_language": false,
+      "urgency_language_confidence": 0.93,
+      "safe_zone_violation": false,
+      "safe_zone_confidence": 0.87
+    },
+    "output": [
+      {
+        "rule_name": "logo_detected",
+        "rule_type": "hard_stop",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_restricted_category",
+        "rule_type": "hard_stop",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_competitor",
+        "rule_type": "hard_stop",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_black_border",
+        "rule_type": "soft",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_pixelation",
+        "rule_type": "soft",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_cropping",
+        "rule_type": "soft",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "no_urgency_language",
+        "rule_type": "soft",
+        "passed": true,
+        "reasoning": "Passed"
+      },
+      {
+        "rule_name": "safe_zone_compliance",
+        "rule_type": "soft",
+        "passed": true,
+        "reasoning": "Passed"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-07-01T22:01:37.102835+00:00",
+    "rules_version": "1.0",
+    "step": "verdict",
+    "status": "ok",
+    "input": {
+      "pass_rate": 1.0,
+      "triggered_rules": []
+    },
+    "output": {
+      "verdict": "Approved"
+    }
+  }
+]

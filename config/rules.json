@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "confidence_threshold": 0.80,
+  "hard_stops": [
+    {"rule": "logo_detected", "field": "logo_detected", "reasoning_fail": "Logo not detected or confidence too low"},
+    {"rule": "no_restricted_category", "field": "restricted_category", "reasoning_fail": "Restricted category detected"},
+    {"rule": "no_competitor", "field": "competitor_detected", "reasoning_fail": "Competitor brand detected"}
+  ],
+  "soft_rules": [
+    {"rule": "no_black_border", "field": "black_border", "reasoning_fail": "Black border detected around ad"},
+    {"rule": "no_pixelation", "field": "pixelation", "reasoning_fail": "Pixelation detected in image"},
+    {"rule": "no_cropping", "field": "image_cropped", "reasoning_fail": "Image appears cropped"},
+    {"rule": "no_urgency_language", "field": "urgency_language", "reasoning_fail": "Urgency or pricing language detected"},
+    {"rule": "safe_zone_compliance", "field": "safe_zone_violation", "reasoning_fail": "Safe zone violation detected"}
+  ]
+}
