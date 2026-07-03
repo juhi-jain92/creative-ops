@@ -128,7 +128,7 @@ if submit:
             "Advertiser": advertiser.strip(),
             "Vertical": vertical,
             "Ad Slot": "300 × 250",
-            "Start Date": start_date.strftime("%B %-d, %Y"),
+            "Start Date": start_date.strftime("%B %d, %Y"),
             "Email": email.strip(),
             "File": uploaded_file.name,
             "Size": f"{size_kb:.1f} KB",
